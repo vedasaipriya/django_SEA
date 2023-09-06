@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="{% static 'images/logo.jpg' %} ">
+    <link rel="stylesheet" href= "{% static 'css/login.css'%}">
+    <title>Login</title>
+</head>
+
+<body>
+     <form action="home/" method="post">
+         {% csrf_token %}
+        <h2>Login</h2>
+        <input type="text" name="uname" placeholder="Username" ><br><br>
+        <input type="password" name="pwd" placeholder="password" ><br><br>
+        <input type="submit" value="login">
+        <input type="reset" value="reset"><br>
+    </form>
+</body>
+</html>
