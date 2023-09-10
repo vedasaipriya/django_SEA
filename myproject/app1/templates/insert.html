@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert</title>
+</head>
+<body>
+<h1>Enter Employee Details</h1><br><br>
+
+     <form action="/insert/" method="post">
+         {% csrf_token %}
+         <input type="text" name="eid" placeholder="Employee id" ><br><br>
+         <input type="text" name="ename" placeholder="Employee name" ><br><br>
+         <input type="email" name="email" placeholder="enter Email" ><br><br>
+         <input type="text" name="gender" placeholder="enter Gender" ><br><br>
+         <input type="text" name="desg" placeholder="enter Designation" ><br><br>
+         <input type="submit" value="save employee">
+         <input type="reset" value="reset"><br>
+    </form><br><br>
+    <button><a href="{% url 'show-emp' %}">View all Employees</a></button>
+</body>
+</html>

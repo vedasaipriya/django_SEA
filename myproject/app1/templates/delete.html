@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete</title>
+</head>
+<body>
+     <form method="POST">
+            {% csrf_token %}
+
+            <br><br>
+
+            <h2> Are you sure you want to delete "{{ employee.name }}"?</h2>
+            <p>
+                <a href="{% url 'show-emp' %}"> <-- Return</a>
+            </p>
+
+            <p>
+                <input type="submit" value="Confirm">
+            </p>
+        </form>
+</body>
+</html>

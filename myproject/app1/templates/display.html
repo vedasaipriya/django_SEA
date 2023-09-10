@@ -6,7 +6,7 @@
 </head>
 <body>
 <h2 style="text-align:center"> Employee Information </h2>
-    <table align="center" style="margin: 0px auto;" border="1">
+    <table align="center" border="1">
         <tr>
             <th>Employee ID</th>
             <th>Name</th>
@@ -20,16 +20,18 @@
         {% for employee in employees %}
         <tr>
             <td>{{employee.empid}}</td>
-            <td>{{employee.ename}}</td>
+            <td>{{employee.name}}</td>
             <td>{{employee.gender}}</td>
             <td>{{employee.email}}</td>
             <td>{{employee.designation}}</td>
-            <td>
-                <a href="#">Update</a>
+           <td>
+               <a href="/update/{{employee.pk}}">Update</a>
             </td>
+
             <td>
-                <a href="#">Delete</a>
+                <a href="/delete/{{employee.pk}}">Delete</a>
             </td>
+
         </tr>
         {% endfor %}
 
@@ -38,7 +40,7 @@
     <br><br>
 
     Do you want to enter more Employees?<br>
-        <a href="/home/">insert</a>
+        <a href="/insert/">insert</a>
 
 </body>
 </html>
