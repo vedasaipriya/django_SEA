@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retrieve</title>
+</head>
+<body>
+<h2 style="text-align:center"> Employee Information </h2>
+    <table align="center" style="margin: 0px auto;" border="1">
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Designation</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+
+        {% for employee in employees %}
+        <tr>
+            <td>{{employee.empid}}</td>
+            <td>{{employee.ename}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.designation}}</td>
+            <td>
+                <a href="#">Update</a>
+            </td>
+            <td>
+                <a href="#">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    <br><br>
+
+    Do you want to enter more Employees?<br>
+        <a href="/home/">insert</a>
+
+</body>
+</html>

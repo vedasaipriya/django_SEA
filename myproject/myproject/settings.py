@@ -77,7 +77,9 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }'''
-DATABASES = {
+
+
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django_sea',
@@ -85,6 +87,17 @@ DATABASES = {
         'PASSWORD': 've@su20045#i',
         'HOST': 'localhost',
         'PORT': '3306',
+    }
+}
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'django_sea',
+        'USER': 'postgres',
+        'PASSWORD': 'veda',
+        'HOST':'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -121,6 +134,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# added by me
+MEDIA_URL = '/media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
